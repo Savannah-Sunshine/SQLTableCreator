@@ -9,7 +9,7 @@ A python script to write an E2E and log table in SQL
 ### How to run
 Run the following command in a terminal.
 
-`python tableWriter.py`
+`python TableCreator.py`
 
 This will start the program with instructions. You may have to replace the python command with python3.
 
