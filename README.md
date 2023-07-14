@@ -11,7 +11,9 @@ Run the following command in a terminal.
 
 `python TableCreator.py`
 
-This will start the program with instructions. You may have to replace the python command with python3.
+You may have to replace the python command with python3.
+
+Include `-nopk` as an argument if you don't want to create a **p**rimary **k**ey index for the E2E table: `python TableCreator.py -nopk`
 
 ### Output
 It will paste a SQL query for the E2E and log tables to the console and **in your clipboard.**
