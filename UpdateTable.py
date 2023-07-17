@@ -30,7 +30,7 @@ def getInputList_SQL(column_list):
     if inp == '':
         return column_list
     if not inp.startswith('MSA') : # Else, skip row
-        inp = inp.replace('ENABLE,','').replace('"','').replace('NOT NULL','').replace(',','').strip()
+        inp = inp.replace('ENABLE','').replace('"','').replace('NOT NULL','').replace(',','').strip()
         column_list.append(inp)
     return getInputList_SQL(column_list)
 
