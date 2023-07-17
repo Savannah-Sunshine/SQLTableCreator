@@ -9,7 +9,7 @@ A python script to write an E2E and log table in SQL
 ## How to run UpdateTable
 Run the following command.
 
-`python TableCreator.py -sql` or `python TableCreator.py -columns`
+`python UpdateTable.py -sql` or `python UpdateTable.py -columns`
 ###### You may have to replace python with python3.
 
 ### Arguments:
