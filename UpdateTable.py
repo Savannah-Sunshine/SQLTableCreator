@@ -29,7 +29,7 @@ def getInputList_SQL(column_list):
     inp = input().upper()
     if inp == '':
         return column_list
-    if not inp.startswith('MSA') : # Else, skip row
+    if inp.find('MSA') == -1 : # If contain MSA, skip row
         inp = inp.replace('ENABLE','').replace('"','').replace('NOT NULL','').replace(',','').strip()
         column_list.append(inp)
     return getInputList_SQL(column_list)
