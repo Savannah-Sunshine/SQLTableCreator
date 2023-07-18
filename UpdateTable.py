@@ -1,6 +1,7 @@
 import platform
 import subprocess
 import sys
+import re
 
 def copy_to_clipboard(text):
     system = platform.system()
@@ -30,7 +31,9 @@ def getInputList_SQL(column_list):
     if inp == '':
         return column_list
     if inp.find('MSA') == -1 : # If contain MSA, skip row
-        inp = inp.replace('ENABLE','').replace('"','').replace('NOT NULL','').replace(',','').strip()
+        inp = inp.replace('ENABLE','').replace('"','').replace('NOT NULL','')
+        # removes all commas not surrounded by digits (leaves number(38,0) alone)
+        inp = re.sub('(?<!\d),(?!\d)', '', inp).strip()
         column_list.append(inp)
     return getInputList_SQL(column_list)
 
@@ -49,7 +52,7 @@ table_name = getInputString()
 
 
 # Create add new column statement
-output_add_column = "ALTER SESSION SET CURRENT_SCHEMA = WDAY_PREP; \n\n" \
+output_add_column = 'ALTER SESSION SET CURRENT_SCHEMA = WDAY_PREP; \n\n' \
               'ALTER TABLE ' + table_name + ' ADD msa_active_flag varchar2(1);             \n\n'
 
 
