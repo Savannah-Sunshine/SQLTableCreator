@@ -24,7 +24,7 @@ Run the following command.
 The script will write a SQL query. It will print to the console and **save in your clipboard.**
 
 <details>
-  <summary>SQL Table Creater</summary>
+  <summary>SQL Table Creator</summary>
 
 ## How to run TableCreator
 `python TableCreator.py` or `python TableCreator.py -nopk`
