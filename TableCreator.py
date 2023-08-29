@@ -78,7 +78,7 @@ output_LOG_table = 'CREATE TABLE ' + table_name + '_LOG  \n(' \
                        '\n   MSA_ID NUMBER(*,0) \tGENERATED ALWAYS AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999 ' \
                        '\n                      \tINCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  NOT NULL,' \
                        '\n   MSA_LOG_DATE \tTIMESTAMP(6) NOT NULL,' \
-                       '\n   MSA_ACTION \t\tVARCHAR2(1 BYTE) NOT NULL,' \
+                       '\n   MSA_ACTION \t\tVARCHAR2(10 BYTE) NOT NULL,' \
                        '\n   OLD_MSA_ACTIVE_FLAG \tVARCHAR2(1 BYTE)' \
                        +     allData_Old + ',' \
                        '\n   MSA_ACTIVE_FLAG \tVARCHAR2(1 BYTE) NOT NULL'  \
